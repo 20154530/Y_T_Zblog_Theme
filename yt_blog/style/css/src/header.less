@@ -1,0 +1,91 @@
+@import "mixin.less";
+@import "base.less";
+
+
+.banner-imglayout {
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
+}
+
+.banner-expand {
+  float: left;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  right: 0;
+}
+
+#fixed-large-banner {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 320px;
+}
+
+#fixed-large-banner .img-authorinfo {
+  cursor: default;
+  float: right;
+  top: 0;
+  line-height: 32px;
+  height: 32px;
+  font-size: 16px;
+  padding: 0 12px;
+  color: hsla(0, 0%, 100%, .72);
+  box-shadow: 0 0 10px 4px hsla(0, 0%, 0%, .24);
+  background: hsla(0, 0%, 0%, .24);
+}
+
+#fixed-large-banner a.banner-expand {
+  justify-content: start;
+  bottom: 0;
+  font-size: 18px;
+  padding: 6px 2px 4px 2px;
+  background-color: hsla(0, 0%, 0%, .4);
+  color: hsla(0, 0%, 100%, .72);
+  transform: translateX(80px);
+}
+
+#fixed-large-banner a.banner-expand:hover {
+  color: hsla(0, 0%, 100%, 1);
+  transform: translateX(0);
+}
+
+#fixed-large-banner a.banner-expand>span {
+  padding: 0 4px;
+}
+
+#fixed-large-banner a.banner-expand span+span {
+  padding: 0 4px;
+  font-size: 14px;
+}
+
+#fixed-top-banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+#fixed-top-banner .banner-img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, .64);
+}
+
+#fixed-top-banner .banner-expand {
+  float: right;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  padding: 3px 0 0 2px;
+  color: hsla(0, 0%, 100%, .72);
+  background-color: hsla(0, 0%, 0%, .2);
+}
+
+#fixed-top-banner .banner-expand:hover {
+  color: hsla(0, 0%, 100%, 1);
+  background-color: hsla(0, 0%, 0%, .4);
+}

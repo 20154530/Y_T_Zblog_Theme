@@ -1,0 +1,62 @@
+@import "mixin.less";
+@import "base.less";
+
+
+
+
+#fixed-bottom-footer {
+  position  : relative;
+  min-height: 180px;
+  width     : 100%;
+  background: hsla(0, 0%, 24%, 1);
+  box-shadow: 0 0 12px 1px hsla(0, 0%, 0%, .6);
+  color     : hsla(0, 0%, 100%, .84);
+}
+
+#fixed-bottom-footer .footer-holder {
+  position       : relative;
+  width          : 80%;
+  padding        : 24px 0;
+  display        : flex;
+  flex-direction : column;
+  justify-content: start;
+}
+
+#fixed-bottom-footer .footer-links .title {
+  font-size  : 16px;
+  line-height: 24px;
+  height     : 24px;
+}
+
+#fixed-bottom-footer .footer-links .links {
+  margin: 8px 0 0 0;
+  height: 96px;
+}
+
+#fixed-bottom-footer .footer-links li {
+  list-style: none;
+  margin    : 4px 0 0 0;
+}
+
+#fixed-bottom-footer .footer-links a {
+  color: hsla(0, 0%, 100%, .44);
+}
+
+#fixed-bottom-footer .footer-links a:hover {
+  color: hsla(0, 0%, 100%, .96);
+}
+
+#fixed-bottom-footer .footer-copyright {
+  float         : left;
+  left          : 0;
+  font-size     : 12px;
+  margin        : 8px 0;
+  color         : hsla(0, 0%, 100%, .64);
+  display       : flex;
+  flex-direction: column;
+  align-content : center;
+}
+
+#fixed-bottom-footer .footer-copyright span {
+  text-align: center;
+}

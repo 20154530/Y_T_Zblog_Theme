@@ -1,0 +1,101 @@
+.flex-layout-row() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-layout-column() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.noneMP() {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap_parent() {
+  width: 100%;
+  height: 100%;
+}
+
+.none_size() {
+  width: 0;
+  height: 0;
+}
+
+.text_box(@lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @lines;
+  -webkit-box-orient: vertical;
+}
+
+.translateY(@px : 0px) {
+  -webkit-transform: translateY(@px);
+  transform: translateY(@px);
+}
+
+.transition(@arguments) {
+  transition: @arguments;
+  -moz-transition: @arguments;
+  -webkit-transition: @arguments;
+  -o-transition: @arguments;
+}
+
+.transform(@arguments) {
+  transform: @arguments;
+  -ms-transform: @arguments;
+  -moz-transform: @arguments;
+  -webkit-transform: @arguments;
+  -o-transform: @arguments;
+}
+
+.animation(@name; @arg) {
+  animation: @name @arg;
+  -o-animation: @name @arg;
+  -moz-animation: @name @arg;
+  -webkit-animation: @name @arg;
+}
+
+.btn-yt-style-doubleline-common {
+  @media @LapTop {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    .transition(~".24s all");
+  }
+}
+
+.btn-yt-style-doubleline(@fontsize: 12px, @thickness: 1px, @depth: 32px, @color: black) {
+  @media @LapTop {
+    &:hover {
+      font-size: @fontsize;
+
+      &::before {
+        transform: translateX(0);
+      }
+
+      &::after {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &::before {
+    &:extend(.btn-yt-style-doubleline-common);
+    top: 0;
+    border-top: @thickness solid @color;
+    transform: translateX(-@depth);
+  }
+
+  &::after {
+    &:extend(.btn-yt-style-doubleline-common);
+    bottom: 0;
+    border-bottom: @thickness solid @color;
+    transform: translateX(@depth);
+  }
+}

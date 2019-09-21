@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6"
+  },
+  "typeAcquisition": {
+    "include": [
+      "jquery"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "outFile": "style/js/control.js",
+    "preserveConstEnums": true,
+    "strict": true
+  },
+  "files": [
+    "node_modules/@types/jquery/index.d.ts",
+    "node_modules/@types/jquery/JQuery.d.ts"
+  ],
+  "include": [
+    "style/js/src/"
+  ]
+}

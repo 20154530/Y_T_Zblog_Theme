@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Marked in the browser</title>
+</head>
+
+<body>
+  <div id="content" style="height:720px;width:100%"></div>
+  <div id="input" style="height:320px;width:100%">
+    <textarea id="ori" oninput="render();" onpropertychange="render();" style="height:180px;width:960px;"></textarea>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    function render (){
+      document.getElementById('content').innerHTML =
+      marked(document.getElementById('ori').value);
+    }
+  </script>
+</body>
+
+</html>
